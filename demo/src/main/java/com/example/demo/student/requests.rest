@@ -1,0 +1,14 @@
+POST http://localhost:8080/api/v1/student
+Content-Type: application/json
+
+{
+    "name": "Mary Poppins", 
+    "email": "poppins@gmail.com",
+    "dob": "1964-12-07"
+}
+
+###
+DELETE http://localhost:8080/api/v1/student/2
+
+###
+PUT http://localhost:8080/api/v1/student/1?name=Marianne&email=marianne@gmail.com
