@@ -34,7 +34,7 @@ public class StudentService {
 	public void deleteStudent(Long id) {
 		Boolean exists = studentRepository.existsById(id);
 		if (!exists) {
-			throw new IllegalStateException("Student with id" + id + " does not exist");
+			throw new IllegalArgumentException("Student with id" + id + " does not exist");
 		}
 		studentRepository.deleteById(id);
 	}

@@ -3,6 +3,7 @@ package com.example.demo.student;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,8 +36,9 @@ public class StudentController {
     }
 
     @DeleteMapping(path="{studentId}")
-    public void deleteStudent(@PathVariable("studentId") Long id) {
-        studentService.deleteStudent(id);
+    public ResponseEntity<?> deleteStudent(@PathVariable("studentId") Long id) {
+
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping(path="{studentId}")
